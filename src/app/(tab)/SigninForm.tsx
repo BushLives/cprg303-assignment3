@@ -80,7 +80,7 @@ function EmployeeForm() {
       )}
 
       <Pressable onPress={handleSubmit(onSubmit)}>
-        <Text>Submit</Text>
+        <Text>Sign In</Text>
       </Pressable>
     </ScrollView>
   );

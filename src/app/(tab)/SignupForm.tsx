@@ -55,7 +55,7 @@ function EmployeeForm() {
   };
   return (
     <ScrollView>
-      <Text>Employee Form</Text>
+      <Text>Sign Up</Text>
 
       <Text>Full Name</Text>
       <Controller
