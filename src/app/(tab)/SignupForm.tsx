@@ -24,7 +24,7 @@ export const signUpSchema = z
   .superRefine((data, ctx) => {
     if (data.confirmPassword !== data.password) {
       ctx.addIssue({
-        code: z.ZodIssueCode.custom,
+        code: "custom",
         path: ["confirmPassword"],
       });
     }

@@ -42,7 +42,7 @@ function EmployeeForm() {
   };
   return (
     <ScrollView>
-      <Text>Employee Form</Text>
+      <Text>Sign In</Text>
 
       <Text>Email</Text>
       <Controller
@@ -51,7 +51,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="example@example.com"
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="none"
@@ -68,7 +68,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="e.g. "
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="characters"

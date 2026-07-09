@@ -5,12 +5,12 @@ import { Controller, useForm } from "react-hook-form";
 import { theme } from "../../../styles/theme";
 
 import {
-    Alert,
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
+  Alert,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
 } from "react-native";
 import { z } from "zod";
 
@@ -62,7 +62,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="e.g. John"
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="words"
@@ -80,7 +80,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="e.g. Doe"
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="words"
@@ -98,7 +98,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="example@example.com"
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="none"
@@ -115,7 +115,7 @@ function EmployeeForm() {
         render={({ field: { onChange, value } }) => (
           <TextInput
             placeholder="(403) 555-6780"
-            placeholderTextColor={"grey"}
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="none"
@@ -131,8 +131,8 @@ function EmployeeForm() {
         name="postalCode"
         render={({ field: { onChange, value } }) => (
           <TextInput
-            placeholder="e.g. "
-            placeholderTextColor={"grey"}
+            placeholder="e.g. T2M 0L4"
+            placeholderTextColor={theme.colors.muted}
             value={value}
             onChangeText={onChange}
             autoCapitalize="characters"
