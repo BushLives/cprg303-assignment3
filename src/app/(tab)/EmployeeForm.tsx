@@ -24,7 +24,14 @@ export const employeeSchema = z.object({
       (val) => val.replace(/\D/g, "").length >= 10,
       "Must have at least digits.",
     ),
-  postalCode: z.string().trim().min(2, "Minimum 2 characters"),
+  postalCode: z
+    .string()
+    .trim()
+    .min(6, "Must be a valid postal code")
+    .regex(
+      /[^A-Z]\D[^A-Z][ ]\D[^A-Z]\D/i,
+      "Must be a valid postal code. (e.g. T2M 0L4)",
+    ),
 });
 
 export type InformationForm = z.infer<typeof employeeSchema>;

@@ -8,7 +8,12 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: { paddingRight: 50, paddingLeft: 50 },
+      }}
+    >
       <Tab.Screen
         name="Employee Form"
         component={EmployeeForm}
